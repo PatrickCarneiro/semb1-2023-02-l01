@@ -1,23 +1,16 @@
 # Questionário Sistemas Embarcados I
 
 ## 1. Explique brevemente o que é compilação cruzada (***cross-compiling***) e para que ela serve.
-A compliação cruzada é um processo que permite desenvolvedores criarem prgramas para dispositivos ou sistemas que não equivalem 
-à plataforma que estão trabalhando diretamente, ou seja, eles irão criar códigos exercutáveis para uma plataforma diferente daquela em que o 
-compilador está sendo exerutado. Um exemplo prático disso ocorre quando um desenvolvedor está trabalhando em um computador com arquitetura
-x86 como um compudador comum, mas deseja compilar um programa para ser executado em um dispositivo móvel com arquitetura ARM, dessa forma 
-ele faria uma compilação cruzada para criar o binário compatível com a plataforma de destino.
+A compliação cruzada é um processo que permite desenvolvedores criarem prgramas para dispositivos ou sistemas que não equivalem à plataforma que estão trabalhando 
+diretamente, ou seja, eles irão criar códigos exercutáveis para uma plataforma diferente daquela em que o compilador está sendo exerutado. Um exemplo prático disso ocorre quando um desenvolvedor está trabalhando em um computador com arquitetura x86 como um compudador comum, mas deseja compilar um programa para ser executado em um dispositivo móvel com arquitetura ARM, dessa forma ele faria uma compilação cruzada para criar o binário compatível com a plataforma de destino.
 
 ## 2. O que é um código de inicialização ou ***startup*** e qual sua finalidade?
-Antes mesmo da função main() ser chamada, uma sequência de programas é executada, e um deles é o código de startup, consistindo em 
-instruções ou rotinas que são ativadas imediatamente após a inicialização de um sistema embarcado. Entre essas rotinas inclui inicializar
-os stacks, adicionar ao stack os argumentos argc e argv, ou qualquer outro parâmetro fornecido via linha de comando, faz a cópia de
-conteúdos das seções da memória não volátil para a RAM, inicializa a seção .bss com zeros e aloca a tabela de vetores de interrupção 
-na memória. Além disso, o heap é inicializado para permitir a alocação dinâmica de memória conforme necessário pelo programa, para assim 
-finalmente, a função main() ser chamada para iniciar a execução do programa principal. 
+Antes mesmo da função main() ser chamada, uma sequência de programas é executada, e um deles é o código de startup, consistindo em instruções ou rotinas que são ativadas imediatamente após a inicialização de um sistema embarcado. Entre essas rotinas inclui inicializar os stacks, adicionar ao stack os argumentos argc e argv, ou qualquer outro parâmetro fornecido via linha de comando, faz a cópia de conteúdos das seções da memória não volátil para a RAM, inicializa a seção .bss com zeros e aloca a tabela de vetores de interrupção na memória. Além disso, o heap é inicializado para permitir a alocação dinâmica de memória conforme necessário pelo programa, para assim finalmente, a função main() ser chamada para iniciar a execução do programa principal. 
 
 ## 3. Sobre o utilitário **make** e o arquivo **Makefile responda**:
 
 #### (a) Explique com suas palavras o que é e para que serve o **Makefile**.
+O Makefile é um código usado para automatizar a compilação e vinculação de programas e bibliotecas, simplificando um processo que geralmente é complexo devido à grande quantidade de arquivos fonte nos programas. Dentro do arquivo Makefile, encontram-se várias regras que definem como os diferentes componentes de um programa devem ser executados, onde cada regra inclui um alvo, pré-requisitos e comandos associados.
 
 #### (b) Descreva brevemente o processo realizado pelo utilitário **make** para compilar um programa.
 
