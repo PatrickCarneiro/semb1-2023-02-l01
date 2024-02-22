@@ -10,7 +10,7 @@ Antes mesmo da função main() ser chamada, uma sequência de programas é execu
 ## 3. Sobre o utilitário **make** e o arquivo **Makefile responda**:
 
 #### (a) Explique com suas palavras o que é e para que serve o **Makefile**.
-O Makefile é um código usado para automatizar a compilação e vinculação de programas e bibliotecas, simplificando um processo que geralmente é complexo devido à grande quantidade de arquivos fonte nos programas. Dentro do arquivo Makefile, encontram-se várias regras que definem como os diferentes componentes de um programa devem ser executados, onde cada regra inclui um alvo, pré-requisitos e comandos associados.
+O Makefile é um código usado para automatizar a compilação e vinculação de programas e bibliotecas, simplificando um processo que geralmente é complexo devido à grande quantidade de arquivos fonte nos programas. Dentro do arquivo Makefile, encontram-se várias regras que definem como os diferentes componentes de um programa devem ser executados, onde cada regra inclui um target, prerequisites e recipe.
 
 #### (b) Descreva brevemente o processo realizado pelo utilitário **make** para compilar um programa.
 O utilitário Make utiliza as regras definidas no arquivo Makefile para automatizar a compilação de programas, assim seguindo uma sequência de passos como a leitura das regras de compilação e dependências do arquivo Makefile, a análise para determinar quais componentes precisam ser compilados e vinculados. Em seguida, verifica os timestamps para identificar quais arquivos foram modificados desde a última compilação, compilando apenas os arquivos fonte alterados ou aqueles cujas dependências foram modificadas, resultando na geração de arquivos objeto correspondentes. Logo depois, vincula os arquivos objeto compilados para criar o executável final do programa e, finalmente, gera o executável final, finalizando o processo de compilação. Durante todo esse processo, o Make evita recompilar arquivos que não foram modificados desde a última compilação e assegura que as regras de compilação definidas no Makefile sejam seguidas adequadamente.
@@ -24,8 +24,10 @@ targets: prerequisites
 Os targets e pré-requisitos são especificados no Makefile como nomes de arquivos separados por espaços. Geralmente, cada regra tem apenas um target, mas em certos casos pode haver mais de um. É crucial observar que a linha de comandos (recipe) associada a um target deve iniciar com uma tabulação.
 
 #### (d) Como são definidas as dependências de um **target**, para que elas são utilizadas?
+As dependências dos targets criados são estabelecidas no Makefile através da lista de pré-requisitos, onde cada pré-requisito representa um arquivo ou outro target necessário para construir o target em questão. Ao ser invocado, o Make realiza a verificação dos timestamps dos pré-requisitos em relação aos timestamps do target, garantindo que todas as dependências sejam satisfeitas. Assim, as dependências são declaradas para assegurar que determinados arquivos ou recursos estejam disponíveis antes de compilar um determinado target, evitando a repetição de etapas de compilação desnecessárias e garante que todas as partes do projeto estejam sempre atualizadas.
 
 #### (e) O que são as regras do **Makefile**, qual a diferença entre regras implícitas e explícitas?
+As regras do Makefile são instruções que informam duas coisas, quando um target está desatualizado e como atualizá-lo. Diante disso, existem dois tipos de regras, as implícitas e as explícitas, enquanto as regras explícitas definem diretamente quando e como recriar um ou mais targets no Makefile, as regras implícitas são deduzidas pelo Make, que utiliza as extensões dos arquivos para determinar quais comandos executar.
 
 ## 4. Sobre a arquitetura **ARM Cortex-M** responda:
 
