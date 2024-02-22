@@ -1,6 +1,11 @@
 # Questionário Sistemas Embarcados I
 
 ## 1. Explique brevemente o que é compilação cruzada (***cross-compiling***) e para que ela serve.
+A compliação cruzada é um processo que permite desenvolvedores criarem prgramas para dispositivos ou sistemas que não equivalem
+à plataforma que estão trabalhando diretamente, ou seja, eles irão criar códigos exercutáveis para uma plataforma diferente daquela em que o 
+compilador está sendo exerutado.Um exemplo prático disso ocorre quando um desenvolvedor está trabalhando em um computador com arquitetura
+x86 como um compudador comum, mas deseja compilar um programa para ser executado em um dispositivo móvel com arquitetura ARM, dessa forma 
+ele faria uma compilação cruzada para criar o binário compatível com a plataforma de destino.
 
 ## 2. O que é um código de inicialização ou ***startup*** e qual sua finalidade?
 
