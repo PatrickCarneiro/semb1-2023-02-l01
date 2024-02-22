@@ -32,6 +32,7 @@ As regras do Makefile são instruções que informam duas coisas, quando um targ
 ## 4. Sobre a arquitetura **ARM Cortex-M** responda:
 
 ### (a) Explique o conjunto de instruções ***Thumb*** e suas principais vantagens na arquitetura ARM. Como o conjunto de instruções ***Thumb*** opera em conjunto com o conjunto de instruções ARM?
+O conjunto de instruções Thumb é uma extensão do conjunto ARM, desenvolvida para proporcionar maior eficiência em termos de tamanho de código e consumo de energia, especialmente em sistemas embarcados. Suas instruções são mais compactas, ocupando apenas 16 bits enquanto ARM ocupa 32bits, o que resulta em uma economia significativa de espaço na memória e na redução da quantidade de dados transferidos da memória para a unidade de processamento. Além disso, os processadores ARM permitem que os desenvolvedores escrevam tanto instruções Thumb quanto instruções ARM padrão, o que contribui para a otimização do desempenho.
 
 ### (b) Explique as diferenças entre as arquiteturas ***ARM Load/Store*** e ***Register/Register***.
 
