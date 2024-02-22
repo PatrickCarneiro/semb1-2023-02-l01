@@ -16,6 +16,12 @@ O Makefile é um código usado para automatizar a compilação e vinculação de
 O utilitário Make utiliza as regras definidas no arquivo Makefile para automatizar a compilação de programas, assim seguindo uma sequência de passos como a leitura das regras de compilação e dependências do arquivo Makefile, a análise para determinar quais componentes precisam ser compilados e vinculados. Em seguida, verifica os timestamps para identificar quais arquivos foram modificados desde a última compilação, compilando apenas os arquivos fonte alterados ou aqueles cujas dependências foram modificadas, resultando na geração de arquivos objeto correspondentes. Logo depois, vincula os arquivos objeto compilados para criar o executável final do programa e, finalmente, gera o executável final, finalizando o processo de compilação. Durante todo esse processo, o Make evita recompilar arquivos que não foram modificados desde a última compilação e assegura que as regras de compilação definidas no Makefile sejam seguidas adequadamente.
 
 #### (c) Qual é a sintaxe utilizada para criar um novo **target**?
+A sintaxe utilizada para criar um novo target é: 
+
+targets: prerequisites
+	recipe
+
+Os targets e pré-requisitos são especificados no Makefile como nomes de arquivos separados por espaços. Geralmente, cada regra tem apenas um target, mas em certos casos pode haver mais de um. É crucial observar que a linha de comandos (recipe) associada a um target deve iniciar com uma tabulação.
 
 #### (d) Como são definidas as dependências de um **target**, para que elas são utilizadas?
 
