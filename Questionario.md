@@ -46,6 +46,7 @@ Além disso, esses processadores apresentam diversos modos de operação, os qua
 * ⁠Modo de Depuração -> Possibilita o acesso a informações de depuração e recursos específicos.
 
 ### (d) Explique como os processadores ARM tratam as exceções e as interrupções. Quais são os diferentes tipos de exceção e como elas são priorizadas? Descreva a estratégia de **group priority** e **sub-priority** presente nesse processo.
+As exceções ocorrem quando erros ou condições anormais ocorrem durante a execução, como violações de acesso, divisões por zero ou execução de instruções privilegiadas. Por outro lado, as interrupções são eventos externos que interrompem o fluxo normal de execução do programa para lidar com situações específicas, como entrada de dados, temporizadores ou comunicação de periféricos. Esses modos são controlados por um mecanismo conhecido como Nested Vectored Interrupt Controller (NVIC), que utiliza estratégias de priorização, como group priority e sub-priority. A prioridade de grupo divide as exceções em grupos com diferentes níveis de prioridade, enquanto a subprioridade classifica a ordem de prioridade dentro de cada grupo com base na ordem de chegada. Isso assegura que exceções críticas sejam tratadas com prioridade, enquanto as menos críticas sejam adiadas.
 
 ### (e) Qual a diferença entre os registradores **CPSR** (***Current Program Status Register***) e **SPSR** (***Saved Program Status Register***)?
 
