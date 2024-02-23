@@ -38,6 +38,12 @@ O conjunto de instruções Thumb é uma extensão do conjunto ARM, desenvolvida 
 Ambas as arquiteturas ARM Laad/Store e Register/Register são abordagens diferentes para lidar com operações de memória em processamento ARM. Em arquiteturas Load/Store, utilizada em processadores mais simples chamados RISC, a memória não opera diretamente nos registradores, assim exigindo instruções específicas para carregar dados da memória para os registradores (Load) e armazenar dados nos registradores da memória (Store). Desta forma, ela separa as operações de acesso à memória das operações aritméticas. Já a arquitetura Register/Register permite operações aritméticas diretas entre registradores, sem a necessidade de acessar a memória, resultando em operações mais eficientes e reduzindo a dependência da memória. Porém aumenta a complexidade e exige mais registradores disponíveis.
 
 ### (c) Os processadores **ARM Cortex-M** oferecem diversos recursos que podem ser explorados por sistemas baseados em **RTOS** (***Real Time Operating Systems***). Por exemplo, a separação da execução do código em níveis de acesso e diferentes modos de operação. Explique detalhadamente como funciona os níveis de acesso de execução de código e os modos de operação nos processadores **ARM Cortex-M**.
+Os processadores ARM-Cortex-M possui dois níveis de acesso principais, o privilegiado e o não previligiado. Enquanto o privilegiado permite utilizar de todas as instruções e ter acesso a todos os recursos, os não privilegiados possui acesso limitado. Desta forma, tendo acesso restrito à memória ou periféricos e também à instruções de máquina. 
+Além disso, esses processadores apresentam diversos modos de operação, os quais influenciam o conjunto de instruções acessíveis e o uso dos recursos do sistema:
+* Modo de usuário ->  Somente são permitidas instruções seguras, e o acesso à memória é controlado. 
+* ⁠Modo de interrupção -> Ativado em caso de interrupção, permite que o processador lide com eventos assíncronos. 
+* ⁠Modo de exceção -> Ativado em caso de exceção, como uma falha de memória ou uma instrução inválida, permite que o processador lide com essas situações de forma adequada.
+* ⁠Modo de Depuração -> Possibilita o acesso a informações de depuração e recursos específicos.
 
 ### (d) Explique como os processadores ARM tratam as exceções e as interrupções. Quais são os diferentes tipos de exceção e como elas são priorizadas? Descreva a estratégia de **group priority** e **sub-priority** presente nesse processo.
 
