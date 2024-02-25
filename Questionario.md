@@ -58,6 +58,7 @@ O registrador Link Register é empregado para armazenar o endereço de retorno d
 O Program Status Register é um registrador que controla e reflete o estado do processador, indicando seu estado atual e facilitando modificações rápidas no ambiente de execução pelo código de baixo nível. Além disso, ele utiliza registradores combinados para fazer sua atuação.
 
 ### (h) O que é a tabela de vetores de interrupção?
+A tabela de vetores de interrupção é fundamental no gerenciamento das rotinas de tratamento de interrupção. Quando uma interrupção é acionada, o processador preserva seu estado atual e inicia a execução da rotina apontada pelo vetor correspondente. Na arquitetura ARM, 15 vetores são reservados para exceções geradas, começando com o primeiro vetor de interrupção, o "Reset Handler", no endereço 0x0000 0004, sendo alocado seu endereço durante o processo de linking. Estabelecer essa tabela é crucial para evitar comportamentos inesperados em caso de exceção não tratada, sendo necessário reservar espaço suficiente no início da memória flash para armazenar toda a tabela do dispositivo, o que requer 408 bytes de alocação.
 
 ### (i) Qual a finalidade do NVIC (**Nested Vectored Interrupt Controller**) nos microcontroladores ARM e como ele pode ser utilizado em aplicações de tempo real?
 
