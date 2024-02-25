@@ -52,6 +52,7 @@ As exceções ocorrem quando erros ou condições anormais ocorrem durante a exe
 Tanto o registrador CPSR quanto o SPSR são componentes da arquitetura ARM, porém são diferentes em sua atuação. O CPSR armazena informações sobre o estado atual do processador, incluindo bits de condição que sinalizam resultados de operações lógicas e aritméticas, além de controlar interrupções e modos de operação, permitindo acesso por software para leitura e gravação. Já o SPSR é destinado a armazenar temporariamente o estado do CPSR quando uma exceção ocorre, possibilitando ao processador retornar à execução do programa exatamente no ponto anterior à exceção.
 
 ### (f) Qual a finalidade do **LR** (***Link Register***)?
+O registrador Link Register é empregado para armazenar o endereço de retorno durante a ocorrência de uma sub-rotina. Seu objetivo principal é possibilitar o retorno da execução do programa ao ponto de chamada após o término da sub-rotina. Esse mecanismo permiti desviar o fluxo de controle do programa para uma nova localização, ao mesmo tempo em que mantém um registro do ponto de retorno para facilitar a volta à execução no ponto de chamada original.
 
 ### (g) Qual o propósito do Program Status Register (PSR) nos processadores ARM?
 
