@@ -55,6 +55,7 @@ Tanto o registrador CPSR quanto o SPSR são componentes da arquitetura ARM, por�
 O registrador Link Register é empregado para armazenar o endereço de retorno durante a ocorrência de uma sub-rotina. Seu objetivo principal é possibilitar o retorno da execução do programa ao ponto de chamada após o término da sub-rotina. Esse mecanismo permiti desviar o fluxo de controle do programa para uma nova localização, ao mesmo tempo em que mantém um registro do ponto de retorno para facilitar a volta à execução no ponto de chamada original.
 
 ### (g) Qual o propósito do Program Status Register (PSR) nos processadores ARM?
+O Program Status Register é um registrador que controla e reflete o estado do processador, indicando seu estado atual e facilitando modificações rápidas no ambiente de execução pelo código de baixo nível. Além disso, ele utiliza registradores combinados para fazer sua atuação.
 
 ### (h) O que é a tabela de vetores de interrupção?
 
